@@ -1,0 +1,1826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Zain Digital Empire | Premium Digital Marketing Agency</title>
+    
+    <!-- Fonts - Clean Professional Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-dark: #0A0A0E;
+            --bg-card: #12121A;
+            --bg-card-alt: #151520;
+            --border-light: rgba(255, 255, 255, 0.06);
+            --primary: #FF2D75;
+            --primary-dark: #E61E5E;
+            --secondary: #00E5FF;
+            --accent-purple: #8B5CF6;
+            --gold: #FBBF24;
+            --text-white: #FFFFFF;
+            --text-gray: #A1A1B0;
+            --success: #10B981;
+            --gradient-primary: linear-gradient(135deg, #FF2D75 0%, #FF6B4A 100%);
+            --gradient-secondary: linear-gradient(135deg, #8B5CF6 0%, #00E5FF 100%);
+            --shadow-sm: 0 4px 20px rgba(0,0,0,0.3);
+            --shadow-md: 0 8px 30px rgba(0,0,0,0.4);
+            --shadow-lg: 0 20px 40px rgba(0,0,0,0.5);
+        }
+
+        body {
+            background: var(--bg-dark);
+            color: var(--text-white);
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            line-height: 1.5;
+        }
+
+        /* Background Gradient */
+        .bg-gradient {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            background: radial-gradient(ellipse at 30% 40%, #1A0A2E 0%, #0A0A0E 100%);
+        }
+        
+        .bg-gradient::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(45deg, rgba(255,45,117,0.02) 0px, rgba(255,45,117,0.02) 1px, transparent 1px, transparent 8px);
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 28px;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(10, 10, 14, 0.92);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border-light);
+            padding: 14px 0;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .brand {
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .badge-group {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .verified-badge {
+            background: linear-gradient(135deg, #1DA1F2, #0E71C8);
+            padding: 6px 16px;
+            border-radius: 40px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .hot-badge {
+            background: var(--gradient-primary);
+            padding: 6px 16px;
+            border-radius: 40px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .quote-btn {
+            background: var(--gradient-primary);
+            padding: 8px 24px;
+            border-radius: 40px;
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .quote-btn:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 20px rgba(255,45,117,0.4);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 160px 0 80px;
+            text-align: center;
+        }
+
+        .logo-orbit {
+            position: relative;
+            width: 240px;
+            height: 240px;
+            margin: 0 auto 40px;
+        }
+        
+        .logo-img {
+            width: 200px;
+            height: 200px;
+            background: url('https://i.ibb.co/HD8X9JZm/IMG-20260408-WA0002.jpg') center/cover;
+            border-radius: 100%;
+            margin: 60px auto;
+            box-shadow: 0 0 50px rgba(255,45,117,0.4);
+            animation: floatSlow 7s ease-in-out infinite;
+            border: 2px solid rgba(255,255,255,0.15);
+        }
+        
+        .orbit-ring {
+            position: absolute;
+            border-radius: 50%;
+            border: 1px solid rgba(255,45,117,0.25);
+            animation: rotateRing linear infinite;
+        }
+        .ring-1 { width: 190px; height: 190px; top: 25px; left: 25px; border: 1px dashed rgba(255,45,117,0.4); animation-duration: 12s; }
+        .ring-2 { width: 230px; height: 230px; top: 5px; left: 5px; border: 1px solid rgba(0,229,255,0.2); animation-duration: 18s; }
+        .ring-3 { width: 270px; height: 270px; top: -15px; left: -15px; border: 1px dotted rgba(139,92,246,0.2); animation-duration: 24s; }
+
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-12px); }
+        }
+        @keyframes rotateRing {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+        }
+
+        .gradient-text {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hero p {
+            color: var(--text-gray);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Section Headers - Detailed */
+        .section-header {
+            margin: 60px 0 30px;
+        }
+
+        .section-header h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: linear-gradient(135deg, #fff 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .section-desc {
+            color: var(--text-gray);
+            margin-top: 8px;
+            font-size: 0.9rem;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: 28px;
+            padding: 28px;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            border-color: var(--primary);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .card-alt {
+            background: var(--bg-card-alt);
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 28px;
+            margin-bottom: 40px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 28px;
+            margin-bottom: 40px;
+        }
+
+        .card-icon {
+            font-size: 2.2rem;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .card-icon img {
+            width: 42px;
+            height: 42px;
+            object-fit: contain;
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .card-desc {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            margin-bottom: 18px;
+        }
+
+        /* Price List */
+        .price-list {
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid var(--border-light);
+        }
+
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            font-size: 0.9rem;
+            border-bottom: 1px dashed rgba(255,255,255,0.05);
+        }
+
+        .price-row span:first-child { color: var(--text-gray); }
+        .price-row span:last-child { font-weight: 700; color: var(--secondary); }
+
+        /* Apps Row */
+        .apps-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 16px;
+        }
+
+        .app-tag {
+            background: rgba(255,255,255,0.05);
+            border-radius: 40px;
+            padding: 8px 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            transition: 0.2s;
+        }
+
+        .app-tag:hover {
+            background: rgba(255,45,117,0.15);
+        }
+
+        .app-tag i { font-size: 1rem; }
+
+        /* Logo Samples */
+        .logo-showcase {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .logo-showcase img {
+            width: 65px;
+            height: 65px;
+            object-fit: contain;
+            background: white;
+            border-radius: 16px;
+            padding: 8px;
+        }
+
+        /* Courses */
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .course-card {
+            background: rgba(255,255,255,0.03);
+            border-radius: 20px;
+            padding: 18px;
+            text-align: center;
+            transition: 0.2s;
+        }
+
+        .course-card:hover {
+            background: rgba(255,45,117,0.08);
+            transform: translateY(-3px);
+        }
+
+        .course-card h4 { font-size: 0.95rem; font-weight: 700; margin: 10px 0 6px; }
+        .course-price { font-size: 1.2rem; font-weight: 800; color: var(--secondary); }
+
+        /* About Section - No Photo */
+        .about-section {
+            background: linear-gradient(135deg, rgba(139,92,246,0.08), rgba(255,45,117,0.05));
+            border-radius: 40px;
+            padding: 50px;
+            margin: 50px 0;
+            border: 1px solid rgba(255,45,117,0.2);
+        }
+        
+        .about-section h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .about-section p {
+            color: var(--text-gray);
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+        
+        .signature-line {
+            border-left: 3px solid var(--primary);
+            padding-left: 20px;
+            margin-top: 20px;
+            font-weight: 600;
+        }
+
+        /* Meta Banner */
+        .meta-banner {
+            background: linear-gradient(135deg, rgba(0,229,255,0.05), rgba(139,92,246,0.05));
+            border: 1px solid rgba(0,229,255,0.25);
+            border-radius: 40px;
+            padding: 35px;
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid var(--border-light);
+            color: var(--text-gray);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 0 20px; }
+            .section-header h2 { font-size: 1.4rem; }
+            .card { padding: 20px; }
+            .about-section { padding: 30px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-gradient"></div>
+
+<header>
+    <div class="container nav">
+        <div class="brand">
+            <img src="https://i.ibb.co/HD8X9JZm/IMG-20260408-WA0002.jpg" alt="logo" class="logo">
+            <span class="silver-text">Zain Digital Empire</span>
+        </div>
+
+        <div class="badge-group">
+            <div class="verified-badge">
+                <i class="fas fa-check-circle"></i> Verified agency
+            </div>
+        </div>
+    </div>
+</header>
+
+<style>
+.logo {
+    width: 50px;
+    height: px;
+    object-fit: contain;
+    margin-right: 8px;
+
+    /* Silver stroke */
+    border: 2px solid #c0c0c0;
+    border-radius: 50%;
+    padding: 2px;
+
+    /* thora premium glow */
+    box-shadow: 0 0 6px rgba(192,192,192,0.6);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.silver-text {
+    background: linear-gradient(45deg, #c0c0c0, #e6e6e6, #a9a9a9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+</style>
+
+
+    <main>
+        <div class="container">
+<!-- Hero Section -->
+<section class="hero" data-aos="fade-up">
+    <div class="logo-orbit">
+        <div class="ring-1 orbit-ring"></div>
+        <div class="ring-2 orbit-ring"></div>
+        <div class="ring-3 orbit-ring"></div>
+        <div class="logo-img"></div>
+    </div>
+
+    <h1>
+        Professional <span class="gradient-text">Digital Marketing</span><br>
+        Solutions by <span class="silver-text">Zain Digital Empire</span>
+    </h1>
+
+    <p>
+        <i class="fas fa-shield-alt"></i> Trusted & Verified Services • 
+        <i class="fab fa-meta"></i> Meta Solutions • 
+        <i class="fab fa-whatsapp"></i> WhatsApp API • 
+        <i class="fas fa-globe"></i> Worldwide Growth
+    </p>
+
+    <div class="hero-buttons">
+        <a href="wa.me/" class="btn primary">Get Started</a>
+        <a href="wa.me/" class="btn secondary">Contact Us</a>
+    </div>
+</section>
+
+<style>
+.gradient-text {
+    background: linear-gradient(45deg, #c0c0c0, #ffffff, #a9a9a9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.silver-text {
+    color: #d9d9d9;
+    font-weight: 600;
+}
+
+/* Buttons */
+.hero-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.btn {
+    padding: 10px 18px;
+    border-radius: 25px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: 0.3s ease;
+    font-weight: 500;
+}
+
+/* Primary button */
+.btn.primary {
+    background: linear-gradient(45deg, #c0c0c0, #ffffff);
+    color: #000;
+}
+
+.btn.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 10px rgba(192,192,192,0.6);
+}
+
+/* Secondary button */
+.btn.secondary {
+    border: 1px solid #c0c0c0;
+    color: #c0c0c0;
+}
+
+.btn.secondary:hover {
+    background: rgba(192,192,192,0.1);
+}
+</style>
+
+<!-- About Us -->
+<div class="about-section" data-aos="fade-up">
+    <h2><i class="fas fa-info-circle"></i> About Zain Digital Empire</h2>
+
+    <p><strong>Zain Digital Empire</strong> is Pakistan's leading digital marketing agency specializing in social media growth, account monetization, and premium verified solutions.</p>
+
+    <!-- Animated Stats -->
+    <div class="stats-box">
+        <div class="stat-item">
+            <i class="fas fa-trophy"></i>
+            <h3 class="counter" data-target="10000">0</h3>
+            <p>Happy Clients</p>
+        </div>
+
+        <div class="stat-item">
+            <i class="fas fa-star"></i>
+            <h3 class="counter" data-target="49">0</h3>
+            <p>Rating (4.9)</p>
+        </div>
+
+        <div class="stat-item">
+            <i class="fas fa-clock"></i>
+            <h3 class="counter" data-target="24">0</h3>
+            <p>Support (24/7)</p>
+        </div>
+    </div>
+</div>
+
+<style>
+.stats-box {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(192,192,192,0.3);
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    width: 120px;
+    backdrop-filter: blur(6px);
+}
+
+.counter {
+    font-size: 20px;
+    font-weight: bold;
+}
+</style>
+
+<script>
+const counters = document.querySelectorAll('.counter');
+
+const startCounter = (counter) => {
+    const target = +counter.getAttribute('data-target');
+    let count = 0;
+
+    const speed = target / 100;
+
+    const update = () => {
+        count += speed;
+        if (count < target) {
+            counter.innerText = Math.floor(count);
+            requestAnimationFrame(update);
+        } else {
+            counter.innerText = target.toLocaleString();
+        }
+    };
+
+    update();
+};
+
+// Run when visible
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            startCounter(entry.target);
+            observer.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.5 });
+
+counters.forEach(counter => {
+    observer.observe(counter);
+});
+</script>
+<!-- Social Media Links Section with Logos -->
+<div class="section-header" data-aos="fade-right">
+    <h2><i class="fas fa-share-alt"></i> Follow Us on Social Media</h2>
+    <div class="section-desc">Stay updated with our latest services, offers, and announcements</div>
+</div>
+
+<div class="social-links" data-aos="fade-up">
+    <a href="https://web.facebook.com/profile.php?id=61573627435937" target="_blank" class="social-card">
+        <img src="https://shadowsmmpanel.com/img/files/5741c78ca32d5e22dfed5eae1301e70f.png" alt="Facebook Logo">
+        <span>Facebook</span>
+    </a>
+    <a href="https://www.tiktok.com/@thomas.williams.a1?_r=1&_t=ZS-95D7iEUb0ld" target="_blank" class="social-card">
+        <img src="https://shadowsmmpanel.com/img/files/8b93ad6f0c4103e5f3212f03c8b2897c.png" alt="TikTok Logo">
+        <span>TikTok</span>
+    </a>
+    <a href="https://www.instagram.com/zain.digitalempire?igsh=MTFvcHU1czd2OXVyZg==" target="_blank" class="social-card">
+        <img src="https://shadowsmmpanel.com/img/files/310dbfd80b7fcb3539f54d2b1f044b16.png" alt="Instagram Logo">
+        <span>Instagram</span>
+    </a>
+</div>
+
+<style>
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin: 30px 0;
+}
+
+.social-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 120px;
+    height: 120px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(192,192,192,0.2);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.social-card img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    transition: 0.3s ease;
+}
+
+.social-card span {
+    font-size: 14px;
+    color: #c0c0c0;
+    font-weight: 600;
+}
+
+.social-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 25px rgba(0,255,255,0.3);
+}
+
+.social-card:hover img {
+    transform: scale(1.2);
+}
+</style>
+<!-- Section: Monetization Services -->
+<div class="section-header" data-aos="fade-right">
+    <h2 class="section-title">
+        <i class="fab fa-tiktok"></i> 
+        <i class="fab fa-youtube"></i> 
+        Monetization Services
+    </h2>
+    <div class="section-desc">
+        Boost your income with proven monetization strategies & verified solutions
+    </div>
+</div>
+
+<div class="grid-2" data-aos="fade-up">
+    
+    <!-- Card 1 -->
+    <div class="card premium-card">
+        <div class="card-icon">
+            <i class="fab fa-youtube yt"></i>
+            <i class="fas fa-dollar-sign money"></i>
+        </div>
+
+        <div class="card-title">Complete Monetization Setup</div>
+        <div class="card-desc">
+            Full setup with advanced strategies to maximize your earnings and growth.
+        </div>
+
+        <div class="price-list">
+            <div class="price-row">
+                <span><i class="fas fa-chart-line"></i> Revenue Strategy</span>
+                <i class="fas fa-check-circle tick"></i>
+            </div>
+            <div class="price-row">
+                <span><i class="fas fa-headset"></i> 24/7 Support</span>
+                <i class="fas fa-check-circle tick"></i>
+            </div>
+            <div class="price-row">
+                <span><i class="fas fa-chart-pie"></i> Analytics</span>
+                <i class="fas fa-check-circle tick"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card premium-card alt">
+        <div class="card-icon">
+            <i class="fab fa-tiktok tk"></i>
+            <i class="fas fa-certificate verify"></i>
+        </div>
+
+        <div class="card-title">Verified Social Accounts</div>
+        <div class="card-desc">
+            Ready-to-use verified accounts for instant monetization & credibility.
+        </div>
+
+        <div class="price-list">
+            <div class="price-row">
+                <span><i class="fas fa-video"></i> TikTok Live</span>
+                <span class="badge">Verified</span>
+            </div>
+            <div class="price-row">
+                <span><i class="fas fa-flag-usa"></i> UK/USA</span>
+                <span class="badge premium">Premium</span>
+            </div>
+            <div class="price-row">
+                <span><i class="fas fa-flag"></i> Pakistan</span>
+                <span class="badge">Available</span>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<style>
+.section-title {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.section-desc {
+    opacity: 0.8;
+    margin-top: 5px;
+}
+
+/* Cards */
+.premium-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(192,192,192,0.2);
+    border-radius: 18px;
+    padding: 20px;
+    transition: 0.3s ease;
+    backdrop-filter: blur(8px);
+}
+
+.premium-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 20px rgba(192,192,192,0.3);
+}
+
+/* Icons */
+.card-icon {
+    font-size: 22px;
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.yt { color: #ff0000; }
+.tk { color: #fff; }
+.money { color: #00ffcc; }
+.verify { color: #c0c0c0; }
+
+/* Tick */
+.tick {
+    color: #00ffcc;
+}
+
+/* Price rows */
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+/* Badges */
+.badge {
+    background: rgba(192,192,192,0.2);
+    padding: 3px 8px;
+    border-radius: 10px;
+    font-size: 11px;
+}
+
+.badge.premium {
+    background: linear-gradient(45deg, #c0c0c0, #ffffff);
+    color: #000;
+}
+</style>
+
+            <!-- Section: UK SIM & Virtual Numbers -->
+            <div class="section-header" data-aos="fade-right">
+                <h2><i class="fas fa-sim-card"></i> UK SIM & WhatsApp Virtual Numbers</h2>
+                <div class="section-desc">Professional SIM services for account verification and secure access</div>
+            </div>
+            <div class="grid-2" data-aos="fade-up">
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-phone-alt"></i> <i class="fas fa-check-circle" style="color:var(--success);"></i></div>
+                    <div class="card-title">UK SIM OTP (Guaranteed)</div>
+                    <div class="card-desc">With full guarantee & support | Fast delivery</div>
+                    <div class="price-row"><span><i class="fas fa-flag-gb"></i> UK SIM OTP Service</span><span>✅ Guaranteed</span></div>
+                    <div class="price-row"><span><i class="fas fa-phone-volume"></i> UK SIM NON-OTP Service</span><span>Standard</span></div>
+                </div>
+<div class="card card-alt">
+    <div class="card-icon">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="small-icon">
+        <i class="fas fa-globe"></i>
+    </div>
+
+    <div class="card-title">WhatsApp Virtual Numbers</div>
+    <div class="card-desc">
+        Virtual numbers from multiple countries for WhatsApp verification
+    </div>
+
+    <div class="grid-2 flags-grid">
+        <div class="flag-item">
+            <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" alt="UK" class="flag-img">
+            <span>UK Numbers</span>
+        </div>
+        <div class="flag-item">
+            <img src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" alt="USA" class="flag-img">
+            <span>USA Numbers</span>
+        </div>
+        <div class="flag-item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_the_United_Arab_Emirates.svg" alt="Dubai" class="flag-img">
+            <span>Dubai Numbers</span>
+        </div>
+        <div class="flag-item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Flag_of_Canada.svg" alt="Canada" class="flag-img">
+            <span>Canada Numbers</span>
+        </div>
+    </div>
+</div>
+
+<style>
+.small-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 6px;
+}
+
+.flags-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.flag-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255,255,255,0.05);
+    padding: 6px 10px;
+    border-radius: 12px;
+}
+
+.flag-img {
+    width: 20px;
+    height: 14px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
+</style>
+
+<!-- Section: Social Media Packages -->
+<div class="section-header" data-aos="fade-right">
+    <h2><i class="fas fa-chart-line"></i> Social Media Growth Packages</h2>
+    <div class="section-desc">Boost your presence on all platforms</div>
+</div>
+
+<div class="grid-2" data-aos="fade-up">
+
+    <!-- YouTube -->
+    <a href="#" class="card clickable">
+        <div class="card-icon"><i class="fab fa-youtube yt"></i> YouTube</div>
+
+        <div class="price-row"><span>1K Subscribers</span><span>Rs. 6000</span></div>
+        <div class="price-row"><span>1K Views</span><span>Rs. 450</span></div>
+        <div class="price-row"><span>1K Likes</span><span>Rs. 450</span></div>
+
+        <div class="card-btn">Order Now →</div>
+    </a>
+
+    <!-- Instagram -->
+    <a href="#" class="card clickable">
+        <div class="card-icon"><i class="fab fa-instagram ig"></i> Instagram</div>
+
+        <div class="price-row"><span>1K Views</span><span>Rs. 20</span></div>
+        <div class="price-row"><span>1K Likes</span><span>Rs. 200</span></div>
+        <div class="price-row"><span>1K Followers</span><span>Rs. 800</span></div>
+
+        <div class="card-btn">Order Now →</div>
+    </a>
+
+</div>
+
+<style>
+/* Make full card clickable */
+.clickable {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Bottom line button */
+.card-btn {
+    margin-top: 15px;
+    padding: 10px;
+    text-align: center;
+    border-top: 1px solid rgba(192,192,192,0.3);
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+/* Hover effect */
+.clickable:hover .card-btn {
+    background: linear-gradient(45deg, #c0c0c0, #ffffff);
+    color: #000;
+}
+
+/* Card hover */
+.clickable:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 15px rgba(192,192,192,0.3);
+}
+
+/* Icon colors */
+.yt { color: #ff0000; }
+.ig { color: #e4405f; }
+</style>
+
+<!-- Logo Design Section -->
+<div class="section-header" data-aos="fade-right">
+    <h2><i class="fas fa-palette"></i> Professional Logo Design Services</h2>
+    <div class="section-desc">Custom, stylish logos that make your brand stand out</div>
+</div>
+
+<div class="card logo-card" data-aos="fade-up">
+    <div class="card-title">Premium Logo Design Portfolio</div>
+
+    <div class="logo-showcase">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIV4vmKdX1pp9CsA9kha1Q75f1QBY9YN4_-cCbFrL_o7TGfZ4Y0ZNgdZs&s=10" alt="Logo Sample">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmI5uMv9Ouucss2uwDwGOez-onrZf9C5GvKkPNdDINEHFSq2tAV2nQQB7C&s=10" alt="Logo Sample">
+    </div>
+
+    <div class="logo-cta">
+        <i class="fas fa-plus-circle"></i> Custom Logo Design starting from <strong>Rs. 1999</strong>
+    </div>
+</div>
+
+<style>
+.logo-card {
+    padding: 20px;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(192,192,192,0.2);
+    backdrop-filter: blur(8px);
+}
+
+.logo-showcase {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.logo-showcase img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover zoom + glow */
+.logo-showcase img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(192,192,192,0.4);
+}
+
+/* CTA */
+.logo-cta {
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(192,192,192,0.3);
+    font-size: 14px;
+    color: #c0c0c0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 500;
+}
+
+.logo-cta strong {
+    color: #ffffff;
+}
+</style>
+
+<!-- UC Cards & Premium Apps -->
+<div class="section-header" data-aos="fade-right">
+    <h2><i class="fas fa-gem"></i> UC Cards & Premium App Subscriptions</h2>
+    <div class="section-desc">Best prices for UC and premium apps</div>
+</div>
+
+<div class="grid-2" data-aos="fade-up">
+
+    <!-- UC Card -->
+    <div class="card uc-card">
+        <div class="card-icon">
+            <img src="https://i.pinimg.com/474x/55/c0/b1/55c0b1a613036956408fd557b4aef46f.jpg" alt="PUBG Logo" class="pubg-logo">
+            PUBG UC
+        </div>
+
+        <div class="price-row"><span>60 UC</span><span>Rs. 274</span></div>
+        <div class="price-row"><span>300+25 UC</span><span>Rs. 1369</span></div>
+        <div class="price-row"><span>600+60 UC</span><span>Rs. 2700</span></div>
+        <div class="price-row"><span>1500+300 UC</span><span>Rs. 6874</span></div>
+        <div class="price-row"><span>3000+850 UC</span><span>Rs. 13749</span></div>
+    </div>
+
+    <!-- Premium App Card -->
+    <div class="card uc-card alt">
+        <div class="card-icon"><i class="fas fa-mobile-alt"></i> Premium App Subscriptions</div>
+        <div class="price-row"><span>Netflix 1 Month</span><span>Rs. 699</span></div>
+        <div class="price-row"><span>Spotify Premium</span><span>Rs. 499</span></div>
+        <div class="price-row"><span>Disney+ Hotstar</span><span>Rs. 599</span></div>
+        <div class="price-row"><span>Other Premium Apps</span><span>Varies</span></div>
+    </div>
+
+</div>
+
+<style>
+.uc-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(192,192,192,0.2);
+    border-radius: 18px;
+    padding: 20px;
+    transition: 0.3s ease;
+    backdrop-filter: blur(8px);
+}
+
+.uc-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 20px rgba(192,192,192,0.4);
+}
+
+/* Card icon with PUBG logo */
+.card-icon {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.pubg-logo {
+    width: 26px;
+    height: auto;
+}
+
+/* Price rows */
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    border-top: 1px solid rgba(192,192,192,0.1);
+    font-size: 14px;
+}
+
+.alt .price-row {
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+</style>
+<div class="card card-alt premium-apps-card" data-aos="fade-up">
+    <div class="card-icon"><i class="fas fa-mobile-alt"></i> Premium Apps</div>
+
+    <div class="apps-grid">
+        <div class="app-tag">
+            <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/capcut-icon.png" alt="CapCut" class="app-icon">
+            CapCut <strong>Rs. 550</strong>
+        </div>
+        <div class="app-tag">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix" class="app-icon">
+            Netflix <strong>Rs. 450</strong>
+        </div>
+        <div class="app-tag">
+            <img src="https://static.wikia.nocookie.net/logopedia/images/9/94/InShOt.png/revision/latest/scale-to-width-down/250?cb=20191005001513" alt="InShot" class="app-icon">
+            InShot <strong>Rs. 400</strong>
+        </div>
+        <div class="app-tag">
+            <img src="https://play-lh.googleusercontent.com/XJ6_UDSJx-QHQreBmIro5VMRJ--42F1XY3QphSYkeSRZdAUA0o_Y-EydVdK-NZOh=w240-h480-rw" alt="Remini" class="app-icon">
+            Remini <strong>Rs. 400</strong>
+        </div>
+        <div class="app-tag">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiGFaaYI_dzvo3w6NrrxmEVqNrr9mBf62N2A&s" alt="Wink" class="app-icon">
+            Wink <strong>Rs. 500</strong>
+        </div>
+        <div class="app-tag">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-Xb_OsSre-wxIFPYV3VGpyJiE84aHbiDvaMvGQjkwWQ&s" alt="Movie Box" class="app-icon">
+            Movie Box <strong>Rs. 400</strong>
+        </div>
+        <div class="app-tag">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiBquaTGkccnjcggyARtDnC5ODhxzXDrJxrg&s" alt="MX Player" class="app-icon">
+            MX Player <strong>Rs. 300</strong>
+        </div>
+        <div class="app-tag">
+            <img src="https://static.wikia.nocookie.net/logopedia/images/2/24/Vidmate.jpeg/revision/latest?cb=20200419120124" alt="VidMate" class="app-icon">
+            VidMate <strong>Rs. 300</strong>
+        </div>
+        <div class="app-tag">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuUtG8GuTD2T95PixVLdcb9xfk-h7PdpeYuhxPMO2__w&s" alt="SnapTube" class="app-icon">
+            SnapTube <strong>Rs. 300</strong>
+        </div>
+        <div class="app-tag">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1XCxipVfDOfEXBIvDJyImloezj6jxej0MEB8GKjWUKg&s" alt="ShareIt" class="app-icon">
+            Shareit <strong>Rs. 300</strong>
+        </div>
+    </div>
+</div>
+
+<style>
+.premium-apps-card {
+    padding: 25px;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(192,192,192,0.2);
+    backdrop-filter: blur(8px);
+}
+
+.apps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.app-tag {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 14px;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.app-tag:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 12px rgba(192,192,192,0.3);
+}
+
+.app-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    border-radius: 6px;
+}
+</style>
+
+<!-- Courses Section -->
+<div class="section-header" data-aos="fade-right">
+    <h2><i class="fas fa-graduation-cap"></i> Professional Training Courses</h2>
+    <div class="section-desc">Complete training programs with professional guidance</div>
+</div>
+
+<div class="courses-grid" data-aos="fade-up">
+
+    <div class="course-card">
+        <i class="fas fa-chart-line course-icon"></i>
+        <h4>Social Media Marketing</h4>
+        <div class="course-price">Rs. 2499</div>
+    </div>
+
+    <div class="course-card">
+        <i class="fas fa-paintbrush course-icon"></i>
+        <h4>Graphic Designing</h4>
+        <div class="course-price">Rs. 2999</div>
+    </div>
+
+    <div class="course-card">
+        <i class="fas fa-shopping-cart course-icon"></i>
+        <h4>E-Commerce</h4>
+        <div class="course-price">Rs. 2999</div>
+    </div>
+
+    <div class="course-card">
+        <i class="fas fa-video course-icon"></i>
+        <h4>Video & Photo Editing</h4>
+        <div class="course-price">Rs. 1999</div>
+    </div>
+
+    <div class="course-card">
+        <i class="fas fa-image course-icon"></i>
+        <h4>Thumbnail Design</h4>
+        <div class="course-price">Rs. 1999</div>
+    </div>
+
+    <div class="course-card">
+        <i class="fas fa-laptop-code course-icon"></i>
+        <h4>Freelance Full Series</h4>
+        <div class="course-price">Rs. 1999</div>
+    </div>
+
+    <div class="course-card">
+        <i class="fas fa-shield-alt course-icon"></i>
+        <h4>Wi-Fi Cracking*</h4>
+        <div class="course-price">Rs. 1499</div>
+        <small>Educational Only</small>
+    </div>
+
+</div>
+
+<style>
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Individual course card */
+.course-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(192,192,192,0.2);
+    border-radius: 18px;
+    padding: 25px 15px;
+    text-align: center;
+    transition: 0.3s ease;
+    backdrop-filter: blur(8px);
+}
+
+.course-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 20px rgba(192,192,192,0.3);
+}
+
+.course-icon {
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+    color: #c0c0c0;
+}
+
+.course-card h4 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.course-price {
+    font-size: 14px;
+    color: #fff;
+    font-weight: 500;
+}
+
+.course-card small {
+    display: block;
+    margin-top: 5px;
+    color: rgba(192,192,192,0.7);
+    font-size: 11px;
+}
+</style>
+
+<!-- Meta Verification Banner -->
+<div class="meta-banner" data-aos="zoom-in">
+    <div class="banner-icons">
+        <i class="fab fa-whatsapp whatsapp-icon"></i>
+        <i class="fab fa-meta meta-icon"></i>
+    </div>
+
+    <h3>WhatsApp Meta Verification Available</h3>
+    <p>✓ Green Tick Badge for Business ✓ Official WhatsApp API ✓ Verified Business Account</p>
+
+    <div class="verified-badges">
+        <div class="verified-badge whatsapp-badge">
+            <i class="fab fa-whatsapp"></i> WhatsApp Business Partner
+        </div>
+        <div class="verified-badge meta-badge">
+            <img src="https://cdn-icons-png.freepik.com/256/10015/10015447.png?semt=ais_white_label" alt="Meta Verified">
+            Meta Blue Tick Verified
+        </div>
+    </div>
+</div>
+
+<style>
+.meta-banner {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(192,192,192,0.2);
+    border-radius: 18px;
+    padding: 30px 20px;
+    text-align: center;
+    backdrop-filter: blur(8px);
+    max-width: 800px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.banner-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.whatsapp-icon {
+    font-size: 2.5rem;
+    color: #25D366;
+}
+
+.meta-icon {
+    font-size: 2rem;
+    color: #1877f2; /* Meta Blue */
+}
+
+.meta-banner h3 {
+    margin: 12px 0;
+    font-size: 1.5rem;
+}
+
+.meta-banner p {
+    font-size: 14px;
+    color: #c0c0c0;
+}
+
+.verified-badges {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.verified-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    border-radius: 14px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #fff;
+    transition: 0.3s ease;
+}
+
+.whatsapp-badge {
+    background: #25D366;
+}
+
+.meta-badge {
+    background: #1877f2;
+    padding: 6px 10px;
+}
+
+.verified-badge:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 10px rgba(192,192,192,0.3);
+}
+
+.meta-badge img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+</style>
+<!-- Our Achievements / Clients Section -->
+<div class="section-header" data-aos="fade-right">
+    <h2><i class="fas fa-users"></i> Our Achievements & Clients</h2>
+    <div class="section-desc">Trusted by thousands of satisfied clients worldwide</div>
+</div>
+
+<div class="achievements-grid" data-aos="fade-up">
+    <div class="achievement-card">
+        <div class="achievement-count" data-count="10000">500+</div>
+        <div class="achievement-label">Happy Clients</div>
+    </div>
+    <div class="achievement-card">
+        <div class="achievement-count" data-count="5000">50</div>
+        <div class="achievement-label">Verified Accounts Delivered</div>
+    </div>
+    <div class="achievement-card">
+        <div class="achievement-count" data-count="1200">100</div>
+        <div class="achievement-label">Projects Completed</div>
+    </div>
+</div>
+
+<div class="testimonials-carousel" data-aos="fade-up">
+    <div class="testimonial-card">
+        <p>“Zain Digital Empire helped me grow my social media presence like never before! Fast delivery & verified accounts.”</p>
+        <h5>- Ali R.</h5>
+    </div>
+    <div class="testimonial-card">
+        <p>“Professional team and excellent support. Highly recommend for anyone looking to monetize online.”</p>
+        <h5>- Sana K.</h5>
+    </div>
+    <div class="testimonial-card">
+        <p>“Trusted service with proven results. Happy with every single project they delivered.”</p>
+        <h5>- Hamza F.</h5>
+    </div>
+</div>
+
+<style>
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.achievement-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(192,192,192,0.2);
+    border-radius: 18px;
+    padding: 25px 15px;
+    backdrop-filter: blur(8px);
+    transition: 0.3s ease;
+}
+
+.achievement-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 20px rgba(192,192,192,0.3);
+}
+
+.achievement-count {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.achievement-label {
+    font-size: 14px;
+    color: #c0c0c0;
+}
+
+/* Testimonials */
+.testimonials-carousel {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 20px 0;
+    scroll-snap-type: x mandatory;
+}
+
+.testimonial-card {
+    flex: 0 0 300px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(192,192,192,0.2);
+    border-radius: 18px;
+    padding: 20px;
+    backdrop-filter: blur(8px);
+    scroll-snap-align: center;
+}
+
+.testimonial-card p {
+    font-size: 14px;
+    color: #c0c0c0;
+    margin-bottom: 10px;
+}
+
+.testimonial-card h5 {
+    font-size: 13px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+/* Optional: hide scrollbar */
+.testimonials-carousel::-webkit-scrollbar {
+    display: none;
+}
+</style>
+
+<script>
+// Count Up Animation
+const counters = document.querySelectorAll('.achievement-count');
+counters.forEach(counter => {
+    const updateCount = () => {
+        const target = +counter.getAttribute('data-count');
+        const count = +counter.innerText;
+        const increment = target / 200; // speed
+        if(count < target) {
+            counter.innerText = Math.ceil(count + increment);
+            setTimeout(updateCount, 20);
+        } else {
+            counter.innerText = target;
+        }
+    };
+    updateCount();
+});
+</script>
+
+<!-- Location / Contact Section -->
+<div class="contact-card" data-aos="fade-up">
+    <i class="fas fa-map-marker-alt contact-icon"></i>
+    <h3>OUR SPECIALIST OFFICE</h3>
+    <p class="location-text">Shergarh, Renala Khurd (Okara), Punjab, Pakistan</p>
+
+    <div class="contact-details">
+        <p><i class="fas fa-envelope"></i> <a href="mailto:contact@zaindigitalempire.com">contact@zaindigitalempire.com</a></p>
+        <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/923342002756" target="_blank">+92 334 2002756</a></p>
+        <p><i class="fas fa-clock"></i> 24/7 Customer Support Available</p>
+    </div>
+</div>
+
+<style>
+.contact-card {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 30px 25px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(192,192,192,0.2);
+    border-radius: 20px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    transition: 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 25px rgba(192,192,192,0.3);
+}
+
+.contact-icon {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.contact-card:hover .contact-icon {
+    transform: rotate(-10deg) scale(1.1);
+    color: #ffffff;
+}
+
+.contact-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.location-text {
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #c0c0c0;
+}
+
+.contact-details p {
+    font-size: 14px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.contact-details p i {
+    color: var(--primary);
+}
+
+.contact-details p a {
+    color: #c0c0c0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-details p a:hover {
+    color: #ffffff;
+}
+</style>
+    </main>
+
+<footer>
+    <div class="container footer-container">
+        <p>© 2025 Zain Digital Empire — Premium Digital Marketing Agency | Verified & Trusted</p>
+        <p class="social-icons">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-tiktok"></i>
+            <i class="fab fa-youtube"></i>
+            <i class="fab fa-whatsapp"></i>
+            Connect With Us
+        </p>
+        <p class="developed-by">Developed by <strong>Hasnain Network</strong></p>
+    </div>
+</footer>
+
+<style>
+footer {
+    background: rgba(0,0,0,0.85);
+    padding: 25px 15px;
+    color: #c0c0c0;
+    text-align: center;
+    font-size: 14px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer .social-icons i {
+    margin: 0 6px;
+    color: #ffffff;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+footer .social-icons i:hover {
+    color: var(--primary);
+    transform: translateY(-2px);
+}
+
+footer .developed-by {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #888;
+}
+</style>
+<!-- Contact Form Section -->
+<div class="section-header" data-aos="fade-right">
+    <h2><i class="fas fa-envelope"></i> Contact Us</h2>
+    <div class="section-desc">Send us your message directly and we’ll get back to you ASAP</div>
+</div>
+
+<div class="contact-form-container" data-aos="fade-up">
+    <form id="contactForm">
+        <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Subject of your message" required>
+        </div>
+
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
+        </div>
+
+        <button type="submit">Send Message <i class="fas fa-paper-plane"></i></button>
+    </form>
+</div>
+
+<style>
+.contact-form-container {
+    max-width: 700px;
+    margin: 30px auto 60px;
+    padding: 25px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 18px;
+    border: 1px solid rgba(192,192,192,0.2);
+    backdrop-filter: blur(10px);
+}
+
+.contact-form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #c0c0c0;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(192,192,192,0.3);
+    background: rgba(255,255,255,0.05);
+    color: #fff;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 10px rgba(192,192,192,0.2);
+}
+
+button[type="submit"] {
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 14px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+button[type="submit"]:hover {
+    background: #ffffff20;
+    transform: translateY(-3px);
+}
+</style>
+
+<script>
+// Simple form submit simulation
+document.getElementById("contactForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    alert("Your message has been sent! We'll get back to you shortly.");
+    this.reset();
+});
+</script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({ once: true, duration: 600 });
+    </script>
+    <script async src="https://d2mpatx37cqexb.cloudfront.net/delightchat-whatsapp-widget/embeds/embed.min.js"></script>
+    <script>
+        window.addEventListener('load', function() {
+            if (typeof _waEmbed !== 'undefined') {
+                _waEmbed(
+                    { btnColor: "#25D366", ctaText: "Chat on WhatsApp", cornerRadius: 50, marginBottom: 20, btnPosition: "right", whatsAppNumber: "923342002756", welcomeMessage: "Hi! I need premium digital services from Zain Digital Empire", zIndex: 999999 },
+                    { title: "Zain Digital Empire", subTitle: "Premium Digital Agency", headerBackgroundColor: "#FF2D75", greetingText: "Welcome! How can we help you grow?", ctaText: "Start Chat", btnColor: "#00E5FF" }
+                );
+            }
+        });
+    </script>
+</body>
+</html>
